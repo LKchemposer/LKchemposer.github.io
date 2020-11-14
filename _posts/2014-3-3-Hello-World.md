@@ -8,6 +8,7 @@ Rock, Paper, Scissor is a classic game. Have you ever thought, though, how many 
 First, let's play a few games of Rock, Paper, Scissor against an RNG!
 
 ```Python3
+{% highlight python %}
 beat = {'rock': 'scissor', 'scissor': 'paper', 'paper': 'rock'}
 
 def rock_paper_scissor():
@@ -16,6 +17,7 @@ def rock_paper_scissor():
     print('AI chooses: {choice}. {result}!'.format(choice=ai.title(), result='Tie' if c == ai else 'You win' if beat[c] == ai else 'You lose'))
 
 rock_paper_scissor()
+{% endhighlight %}
 ```
 
 How many games did it take you to win or lose? Let's explore this problem using both theory and simulations. First, mathematically, whatever the AI picks, we have 2 in 3 chances of either winning or losing, i.e., the game ends, and 1 in 3 chances of getting a tie. Let $E[X]$ be the expected number of games taken place, we have:
