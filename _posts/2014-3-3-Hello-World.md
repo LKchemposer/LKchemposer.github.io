@@ -7,7 +7,7 @@ Rock, Paper, Scissor is a classic game. Have you ever thought, though, how many 
 
 First, let's play a few games of Rock, Paper, Scissor against an RNG!
 
-```
+```Python3
 beat = {'rock': 'scissor', 'scissor': 'paper', 'paper': 'rock'}
 
 def rock_paper_scissor():
@@ -30,7 +30,7 @@ $E[X] = \frac{3}{2} \text{ or } 1.5$
 
 Let's compare with simulations!
 
-```
+```Python3
 # evaluates two ais
 def rps_result(c1, c2):
     if c1 == c2: return 0
