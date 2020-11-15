@@ -99,7 +99,7 @@ max(games), min(games)
     (15, 1)
 
 
-![png](images/rock_paper_scissor_10_1.png)
+![png]({{""images/rock_paper_scissor_10_1.png"}})
 
 
 There are many games of 1, but a game can take up to 8, at least in this simulation. To calculate the expected number of games, we can use the good old:
@@ -164,7 +164,7 @@ max(games), min(games)
     (53, 2)
 
 
-![png](images/rock_paper_scissor_16_1.png)
+![png]({{"images/rock_paper_scissor_16_1.png"}})
 
 
 This plot makes sense! There are no game of 1 (of course), and it mostly take 2 to 8 games or up to almost 60 games in total to get a winner!
@@ -220,7 +220,7 @@ max(games), min(games)
     (29, 2)
 
 
-![png](images/rock_paper_scissor_21_1.png)
+![png]({{"images/rock_paper_scissor_21_1.png"}})
 
 
 Interesting! The upper bound of number of games really decreases drastically, despite the number of games expected differs only by 1.5 games.
