@@ -152,7 +152,7 @@ max(games), min(games)
     (53, 2)
 
 
-![Distribution](images/rock_paper_scissor/rock_paper_scissor_16_1.png)
+![Distribution](/images/rock_paper_scissor/rock_paper_scissor_16_1.png)
 
 
 This plot makes sense! There are no game of 1 (of course), and it mostly take 2 to 8 games or up to almost 60 games in total to get a winner!
@@ -208,7 +208,7 @@ max(games), min(games)
     (29, 2)
 
 
-![Distribution](images/rock_paper_scissor/rock_paper_scissor_21_1.png)
+![Distribution](/images/rock_paper_scissor/rock_paper_scissor_21_1.png)
 
 
 Interesting! The upper bound of number of games really decreases drastically, despite the number of games expected differs only by 1.5 games.
