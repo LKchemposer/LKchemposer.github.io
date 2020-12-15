@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How many games of Rock Paper Scissors do you have to play to win?
 usemathjax: true
+title: How many games of Rock Paper Scissors do you have to play to win?
 ---
 
 Rock, Paper, Scissor is a classic game. Have you ever thought, though, how many games *on average* do you have to play to win or lose against another person, assuming that both choose randomly? Maybe you'd win or lose on the first try, or the second try, but the game surely cannot go that long, unless you keep getting ties? So on average, how many games would you have to play? Let's find out!
