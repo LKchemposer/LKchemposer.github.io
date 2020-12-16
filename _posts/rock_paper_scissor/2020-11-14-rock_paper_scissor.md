@@ -107,9 +107,9 @@ np.mean(games)
 
 Great! But what if ... we are not content with ending the game after only 1 game? Surely, it does not seem fair to call it win or loss after 1 game. So say, we modify the rule a bit: it now takes 2 **consecutive wins** (or losses) for the game to have a winner (i.e., if you get a tie in between 2 wins, it does not count). For example, win-win is valid, but win-tie-win needs another win to end the game. How many games *on average* do you have to play now?
 
-In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $$L$$ be the event that a player has a lead, and $$E[X\|L]$$, therefore, be the number of games played when a player has a lead. Intuitively, $$E[X\|L]$$ must be smaller than $$E[X]$$ because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
+In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $$L$$ be the event that a player has a lead, and $$E[X \vert L]$$, therefore, be the number of games played when a player has a lead. Intuitively, $$E[X \vert L]$$ must be smaller than $$E[X]$$ because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
 
-$$E[X] = \frac{2}{3}(E[X|L] + 1) + \frac{1}{3}(E[X] + 1)$$
+$$E[X] = \frac{2}{3}(E[X \vert L] + 1) + \frac{1}{3}(E[X] + 1)$$
 
 Let's break it down! In 1 in 3 chances, the players tie, number of games increases by 1 but we do not get closer to winning or losing. In 2 in 3 chances, however, the number of games now depends on the number of games when someone has a lead. This explanation can be confusing, so an easier way to think about this equation is simplifying the game into its states. There are 3 states of the game:
 
@@ -119,13 +119,13 @@ Let's break it down! In 1 in 3 chances, the players tie, number of games increas
 
 We start at state (1), and have 2 in 3 chances to reach state (2), and 1 in 3 chances to stay at state (1). The second equation may elucidate this analogy more:
 
-$$E[X|L] = \frac{1}{3} + \frac{1}{3}(E[X] + 1) + \frac{1}{3}(E[X|L] + 1)$$
+$$E[X \vert L] = \frac{1}{3} + \frac{1}{3}(E[X] + 1) + \frac{1}{3}(E[X \vert L] + 1)$$
 
-When someone has a lead, there are now 3 scenarios that can follow: someone win another time and the game ends (i.e., state (2) to state (3)), we get a tie and the game goes back to state (1), or the other player wins, which means they now have a lead (i.e., state (2) remains at state (2)). Every time we go to a state where the game continues, the number of games increments by 1. To solve these equations, we can express $$E[X\|L]$$ in terms of $$E[X]$$ in the second equation, and substitute it in the first, ... or we can [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%281%2F3%29+%28y+%2B+1%29+%2B+%281%2F3%29+%28x+%2B+1%29):
+When someone has a lead, there are now 3 scenarios that can follow: someone win another time and the game ends (i.e., state (2) to state (3)), we get a tie and the game goes back to state (1), or the other player wins, which means they now have a lead (i.e., state (2) remains at state (2)). Every time we go to a state where the game continues, the number of games increments by 1. To solve these equations, we can express $$E[X \vert L]$$ in terms of $$E[X]$$ in the second equation, and substitute it in the first, ... or we can [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%281%2F3%29+%28y+%2B+1%29+%2B+%281%2F3%29+%28x+%2B+1%29):
 
 $$E[X] = 6$$
 
-Also, as expected, $$E[X|H] = \frac{9}{2} \text{ or } 4.5$$ which is smaller than 6. On average you should expect to play 6 games of RPS to get a winner. Let's compare with simulations.
+Also, as expected, $$E[X \vert H] = \frac{9}{2} \text{ or } 4.5$$ which is smaller than 6. On average you should expect to play 6 games of RPS to get a winner. Let's compare with simulations.
 
 
 ```python
@@ -170,14 +170,14 @@ Okay, maybe 6 games (or sometimes, ~60 games) are quite too many to get a winner
 
 Let's look at the set of equations above:
 
-$$E[X] = \frac{2}{3}(E[X|L] + 1) + \frac{1}{3}(E[X] + 1) \\
-E[X|L] = \frac{1}{3} + \frac{1}{3}(E[X] + 1) + \frac{1}{3}(E[X|L] + 1)$$
+$$E[X] = \frac{2}{3}(E[X \vert L] + 1) + \frac{1}{3}(E[X] + 1) \\
+E[X \vert L] = \frac{1}{3} + \frac{1}{3}(E[X] + 1) + \frac{1}{3}(E[X \vert L] + 1)$$
 
 The first equation should be the same because the new rule does not change how someone can get a lead, but the second equation needs to be modified. The $$\frac{1}{3}(E[X] + 1)$$ in the second equation needs to change, because getting a tie now does not move the game state (2) back to (1) (i.e., from someone has a lead to no one has a lead), but holds the game state (2) at (2), with the number of games increasing by 1. Therefore the new equation should be:
 
-$$E[X|L] = \frac{1}{3} + \frac{2}{3}(E[X|L] + 1)$$
+$$E[X \vert L] = \frac{1}{3} + \frac{2}{3}(E[X \vert L] + 1)$$
 
-Same as above, we can solve for $$E[X|L]$$ and substitute it to the first equation (or [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%282%2F3%29+%28x+%2B+1%29)), which gives us:
+Same as above, we can solve for $$E[X \vert L]$$ and substitute it to the first equation (or [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%282%2F3%29+%28x+%2B+1%29)), which gives us:
 
 $$E[X] = \frac{9}{2} \text{ or } 4.5$$
 
