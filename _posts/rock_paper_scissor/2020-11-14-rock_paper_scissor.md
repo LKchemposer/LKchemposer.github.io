@@ -22,8 +22,7 @@ rock_paper_scissor()
 
 How many games did it take you to win or lose? Let's explore this problem using both theory and simulations. First, mathematically, whatever the AI picks, we have 2 in 3 chances of either winning or losing, i.e., the game ends, and 1 in 3 chances of getting a tie. Let $$E[X]$$ be the expected number of games taken place, we have:
 
-$$ E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1) $$
-\[E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1)\]
+$$E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1)$$
 
 Let's break it down! When we play a game of RPS, in 2 in 3 chances, the game ends, the number of game stays the same, but in 1 in 3 chances, the players tie and the number of games increases by 1 (i.e., the game we played), hence $$\frac{1}{3}(E[X] + 1)$$. [Solving this equation](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%2B+%281%2F3%29+%28y+%2B+1%29) gives us:
 
@@ -108,7 +107,7 @@ np.mean(games)
 
 Great! But what if ... we are not content with ending the game after only 1 game? Surely, it does not seem fair to call it win or loss after 1 game. So say, we modify the rule a bit: it now takes 2 **consecutive wins** (or losses) for the game to have a winner (i.e., if you get a tie in between 2 wins, it does not count). For example, win-win is valid, but win-tie-win needs another win to end the game. How many games *on average* do you have to play now?
 
-In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $$L$$ be the event that a player has a lead, and $$E[X|L]$$, therefore, be the number of games played when a player has a lead. Intuitively, $$E[X|L]$$ must be smaller than $$E[X]$$ because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
+In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $$L$$ be the event that a player has a lead, and $$E[X\|L]$$, therefore, be the number of games played when a player has a lead. Intuitively, $$E[X\|L]$$ must be smaller than $$E[X]$$ because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
 
 $$E[X] = \frac{2}{3}(E[X|L] + 1) + \frac{1}{3}(E[X] + 1)$$
 
@@ -122,7 +121,7 @@ We start at state (1), and have 2 in 3 chances to reach state (2), and 1 in 3 ch
 
 $$E[X|L] = \frac{1}{3} + \frac{1}{3}(E[X] + 1) + \frac{1}{3}(E[X|L] + 1)$$
 
-When someone has a lead, there are now 3 scenarios that can follow: someone win another time and the game ends (i.e., state (2) to state (3)), we get a tie and the game goes back to state (1), or the other player wins, which means they now have a lead (i.e., state (2) remains at state (2)). Every time we go to a state where the game continues, the number of games increments by 1. To solve these equations, we can express $$E[X|L]$$ in terms of $$E[X]$$ in the second equation, and substitute it in the first, ... or we can [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%281%2F3%29+%28y+%2B+1%29+%2B+%281%2F3%29+%28x+%2B+1%29):
+When someone has a lead, there are now 3 scenarios that can follow: someone win another time and the game ends (i.e., state (2) to state (3)), we get a tie and the game goes back to state (1), or the other player wins, which means they now have a lead (i.e., state (2) remains at state (2)). Every time we go to a state where the game continues, the number of games increments by 1. To solve these equations, we can express $$E[X\|L]$$ in terms of $$E[X]$$ in the second equation, and substitute it in the first, ... or we can [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%281%2F3%29+%28y+%2B+1%29+%2B+%281%2F3%29+%28x+%2B+1%29):
 
 $$E[X] = 6$$
 
