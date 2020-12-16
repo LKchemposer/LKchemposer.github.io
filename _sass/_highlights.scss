@@ -1,22 +1,10 @@
-
-// .highlight {
-//   background-color: #efefef;
-//   padding: 7px 7px 7px 10px;
-//   border: 1px solid #ddd;
-//   -moz-box-shadow: 3px 3px rgba(0,0,0,0.1);
-//   -webkit-box-shadow: 3px 3px rgba(0,0,0,0.1);
-//   box-shadow: 3px 3px rgba(0,0,0,0.1);
-//   margin: 20px 0 20px 0;
-//   overflow: scroll;
-// }
-
 .highlight {
-    color: #ce887b;
-    font-weight: 400;
-    border: 1px solid #607D8B;
-    -webkit-border-radius: 3px;
-    border-radius: 3px;
-    padding: 0.1rem 0.5rem;
+    background: #303030;
+    color: white;    
+    padding: 7px;
+    margin: 7px;
+    border-radius: 10px;
+    overflow: auto;
 }
 
 code {
