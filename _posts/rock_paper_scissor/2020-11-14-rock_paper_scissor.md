@@ -22,7 +22,8 @@ rock_paper_scissor()
 
 How many games did it take you to win or lose? Let's explore this problem using both theory and simulations. First, mathematically, whatever the AI picks, we have 2 in 3 chances of either winning or losing, i.e., the game ends, and 1 in 3 chances of getting a tie. Let $$E[X]$$ be the expected number of games taken place, we have:
 
-$$ \begin E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1) \end $$
+$$ E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1) $$
+\[E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1)\]
 
 Let's break it down! When we play a game of RPS, in 2 in 3 chances, the game ends, the number of game stays the same, but in 1 in 3 chances, the players tie and the number of games increases by 1 (i.e., the game we played), hence $$\frac{1}{3}(E[X] + 1)$$. [Solving this equation](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%2B+%281%2F3%29+%28y+%2B+1%29) gives us:
 
