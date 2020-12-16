@@ -108,7 +108,7 @@ np.mean(games)
 
 Great! But what if ... we are not content with ending the game after only 1 game? Surely, it does not seem fair to call it win or loss after 1 game. So say, we modify the rule a bit: it now takes 2 **consecutive wins** (or losses) for the game to have a winner (i.e., if you get a tie in between 2 wins, it does not count). For example, win-win is valid, but win-tie-win needs another win to end the game. How many games *on average* do you have to play now?
 
-In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $L$ be the event that a player has a lead, and $$E[X|L]$$, therefore, be the number of games played when a player has a lead. Intuitively, E[X|L] must be smaller than E[X] because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
+In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $$L$$ be the event that a player has a lead, and $$E[X|L]$$, therefore, be the number of games played when a player has a lead. Intuitively, $$E[X|L]$$ must be smaller than $$E[X]$$ because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
 
 $$E[X] = \frac{2}{3}(E[X|L] + 1) + \frac{1}{3}(E[X] + 1)$$
 
@@ -178,7 +178,7 @@ The first equation should be the same because the new rule does not change how s
 
 $$E[X|L] = \frac{1}{3} + \frac{2}{3}(E[X|L] + 1)$$
 
-Same as above, we can solve for $E[X|L]$ and substitute it to the first equation (or [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%282%2F3%29+%28x+%2B+1%29)), which gives us:
+Same as above, we can solve for $$E[X|L]$$ and substitute it to the first equation (or [use Wolfram Alpha](https://www.wolframalpha.com/input/?i=solve+for+y%3A+y+%3D+%282%2F3%29+%28x+%2B+1%29+%2B+%281%2F3%29+%28y+%2B+1%29+and+x+%3D+%281%2F3%29+%2B+%282%2F3%29+%28x+%2B+1%29)), which gives us:
 
 $$E[X] = \frac{9}{2} \text{ or } 4.5$$
 
