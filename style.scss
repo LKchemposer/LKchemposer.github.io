@@ -31,11 +31,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $opensans;
+  font-family: $playfair;
   color: $darkerGray;
   font-weight: bold;
 
-  line-height: 1.7;
+  line-height: 1.5;
   margin: 1em 0 15px;
   padding: 0;
 
@@ -194,7 +194,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $opensans;
+  font-family: $playfair;
   font-weight: bold;
   font-size: 28px;
   letter-spacing: 1px;
@@ -213,9 +213,8 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $opensans;
+  font-family: $playfair;
   font-size: 18px;
-  font-weight: bold;
 
   @include mobile {
     float: none;
@@ -228,7 +227,8 @@ nav {
     margin-left: 20px;
     color: $darkGray;
     text-align: right;
-    font-weight: 300;
+    font-weight: bold;
+    font-size: 40px;
     letter-spacing: 1px;
 
     @include mobile {
