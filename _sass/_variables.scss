@@ -19,6 +19,9 @@ $notosansjp: 'Noto Sans JP', Helvetica, Arial, sans-serif;
 $nunito: 'Nunito', sans-serif;
 $opensans: 'Open Sans', sans-serif;
 
+$librebask: 'Libre Baskerville', serif;
+$srccodepro: 'Source Code Pro', monospace;
+
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {

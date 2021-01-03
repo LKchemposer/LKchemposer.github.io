@@ -6,7 +6,6 @@
 //
 @import "reset";
 @import "variables";
-@import "opensans";
 
 // Syntax highlighting @import is at the bottom of this file
 
@@ -19,8 +18,8 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $opensans;
+  background: $white;
+  font: 18px/1.4 $librebask;
   color: $darkGray;
 }
 
@@ -196,7 +195,7 @@ img {
   color: $darkGray;
   cursor: pointer;
   font-family: $opensans;
-  font-weight: 300;
+  font-weight: bold;
   font-size: 28px;
   letter-spacing: 1px;
 }
@@ -216,6 +215,7 @@ nav {
   margin-top: 23px; // @TODO: Vertically middle align
   font-family: $opensans;
   font-size: 18px;
+  font-weight: bold;
 
   @include mobile {
     float: none;
