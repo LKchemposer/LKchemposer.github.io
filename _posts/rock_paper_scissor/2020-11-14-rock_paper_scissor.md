@@ -6,7 +6,7 @@ title: Rock, Paper, Scissors
 
 Rock, Paper, Scissors (RPS) is a simple classic game. How many plays (or moves) do you have to make (on average) before a game has a winner? Maybe you’d win or lose on the first try, or the second try, but the game surely cannot go that long, right? Let’s find out!
 
-# TL;DR
+# TL; DR
 
 * I made expected value calculations to see how many games one has to play before a game of Rock, Paper, Scissors has a winner
 * I compared calulations to simulations
