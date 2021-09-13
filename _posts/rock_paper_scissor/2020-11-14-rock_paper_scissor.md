@@ -1,22 +1,20 @@
 ---
 layout: post
 usemathjax: true
-title: Rock Paper Scissor and the number of games
+title: Rock, Paper, Scissors
 ---
+
+Rock, Paper, Scissors (RPS) is a simple classic game. How many plays (or moves) do you have to make (on average) before a game has a winner? Maybe you’d win or lose on the first try, or the second try, but the game surely cannot go that long, right? Let’s find out!
 
 # TL;DR
 
 * I made expected value calculations to see how many games one has to play before a game of Rock, Paper, Scissors has a winner
 * I compared calulations to simulations
-* Repeated for a few variations of the rule
+* Repeat, for a few variations of the rule
 
-# The nerdy stuff
+# Instant win
 
-Rock, Paper, Scissors (RPS) is a simple classic game. How many plays (or moves) do you have to make (on average) before a game has a winner? Maybe you’d win or lose on the first try, or the second try, but the game surely cannot go that long, right? Let’s find out!
-
-## Instant win
-
-### Theory
+## Theory
 
 Let's explore this problem using both theory and simulations. First, in terms of mathematics, whatever the AI picks, we have 2 in 3 chances of either winning or losing, i.e., the game ends, and 1 in 3 chances of getting a tie. Let $$E[X]$$ be the expected number of games taken place, we have:
 
@@ -26,7 +24,7 @@ Let's break it down! When we play a game of RPS, in 2 in 3 chances, the game end
 
 $$E[X] = \frac{3}{2} \text{ or } 1.5$$
 
-### Simulations
+## Simulations
 
 Let's compare with simulations!
 
@@ -95,11 +93,11 @@ np.mean(games)
 
     1.499318
 
-## Two consecutive wins
+# Two consecutive wins
 
 Great! But what if ... we are not content with ending the game after only 1 game? Surely, it does not seem fair to call it win or loss after 1 game. So say, we modify the rule a bit: it now takes 2 consecutive wins (or losses) for the game to have a winner (i.e., if you get a tie in between 2 wins, it does not count). For example, win-win is valid, but win-tie-win would need another win to end the game. How many games (on average) do you have to play now?
 
-### Theory
+## Theory
 
 In a way, how this game starts is similar to the other game above: we have 2 in 3 chances a player has a lead, and 1 in 3 chances to get a tie, meaning that the game resets (and the number of games increments by 1). Let $$L$$ be the event that a player has a lead, and $$E[X \vert L]$$, therefore, be the number of games played when a player has a lead. Intuitively, $$E[X \vert L]$$ must be smaller than $$E[X]$$ because having a lead means that there would be fewer games to be played compared to when we first started the match. Let's build the equation:
 
@@ -121,7 +119,7 @@ $$E[X] = 6$$
 
 Also, as expected, $$E[X \vert H] = \frac{9}{2} \text{ or } 4.5$$ which is smaller than 6. On average you should expect to play 6 games of RPS to get a winner. Let's compare with simulations.
 
-### Simulations
+## Simulations
 
 ```python
 games = []
@@ -155,11 +153,11 @@ np.mean(games)
 
     6.02222
 
-## Two wins, but not necessarily consecutive
+# Two wins, but not necessarily consecutive
 
 Okay, maybe 6 games (or sometimes, ~60 games) are quite too many to get a winner, so let's relax the rule a bit: what if ties between 2 wins or losses are acceptable? You need to still win twice, but not consecutively. For example, win-win, win-tie-win, and win-tie-tie-tie-win are all valid wins. How many games should we expect to play until there is an winner?
 
-### Theory
+## Theory
 
 Let's look at the set of equations above:
 
@@ -174,7 +172,7 @@ Same as above, we can solve for $$E[X \vert L]$$ and substitute it to the first 
 
 $$E[X] = \frac{9}{2} \text{ or } 4.5$$
 
-### Simulations
+## Simulations
 
 Let's compare with simulations!
 
