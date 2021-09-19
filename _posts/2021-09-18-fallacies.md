@@ -37,7 +37,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Appeal to Nature Fallacy
 
-<img src='/images/fallacies/appeal_to_nature.png' width='50%'/>
+!["Homosexuality is unnatural, and is therefore bad."](/images/fallacies/appeal_to_nature.png)
 
 * Category: Irrelevant premise
 * Form: Nature is good. A is nature. Therefore, A is good.
@@ -45,9 +45,11 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 * When is it OK? When "nature" is defined within a certain context.
 * How to avoid? List things that are natural and good (e.g., water), natural and bad (e.g., wildfire), unnatural and good (e.g., a plane), unnatural and bad (e.g., reality TV).
 
-## Black and White Thinking, False Dilemma, or False Dichotomy5
+## Black and White Thinking, False Dilemma, or False Dichotomy
 
-<img src='/images/fallacies/false_dichotomy.jpeg' width='30%'/>
+!["Either you love America "](/images/fallacies/false_dichotomy.jpeg)
+
+<!-- <img src='/images/fallacies/false_dichotomy.jpeg' width='30%'/> -->
 
 * Category: False premise
 * Form: Person X is either A or B. X is not A. Therefore, X is B.
