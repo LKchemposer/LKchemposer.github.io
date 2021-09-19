@@ -37,7 +37,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Appeal to Nature Fallacy
 
-!["Homosexuality is unnatural, and is therefore bad."](/images/fallacies/appeal_to_nature.png)
+<img src='/images/fallacies/appeal_to_nature.png'>
 
 * Category: Irrelevant premise
 * Form: Nature is good. A is nature. Therefore, A is good.
@@ -47,7 +47,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Black and White Thinking, False Dilemma, or False Dichotomy
 
-!["Either you love America "](/images/fallacies/false_dichotomy.jpeg)
+<img src='/images/fallacies/false_dichotomy.jpeg' height=80%>
 
 <!-- <img src='/images/fallacies/false_dichotomy.jpeg' width='30%'/> -->
 
@@ -59,7 +59,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Ad Hominem
 
-<img src='/images/fallacies/ad_hominem.jpeg' width='30%'/>
+<img src='/images/fallacies/ad_hominem.jpeg' height='80%'>
 
 * Category: Irrelevant premise
 * Form: Person X have property A. A is bad. Therefore, X is wrong.
@@ -83,7 +83,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Argument from Ignorance
 
-<img src='/images/fallacies/argument_from_ignorance.gif' width='40%'/>
+<img src='/images/fallacies/argument_from_ignorance.gif'>
 
 * Category:
 * Form: ""
@@ -92,7 +92,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Cherry Picking
 
-<img src='/images/fallacies/cherry_picking.gif' width='50%'/>
+<img src='/images/fallacies/cherry_picking.gif' height='70%'>
 
 * Category:
 * Form: ""
