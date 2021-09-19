@@ -45,11 +45,9 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 * When is it OK? When "nature" is defined within a certain context.
 * How to avoid? List things that are natural and good (e.g., water), natural and bad (e.g., wildfire), unnatural and good (e.g., a plane), unnatural and bad (e.g., reality TV).
 
-## Black and White Thinking, False Dilemma, or False Dichotomy
+## Black and White Thinking, or False Dichotomy
 
-<img src='/images/fallacies/false_dichotomy.jpeg' height=80%>
-
-<!-- <img src='/images/fallacies/false_dichotomy.jpeg' width='30%'/> -->
+<div align='center'><img src='/images/fallacies/false_dichotomy.jpeg' height='80%'></div>
 
 * Category: False premise
 * Form: Person X is either A or B. X is not A. Therefore, X is B.
@@ -59,7 +57,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Ad Hominem
 
-<img src='/images/fallacies/ad_hominem.jpeg' height='80%'>
+<div align='center'><img src='/images/fallacies/ad_hominem.jpeg' width='80%'></div>
 
 * Category: Irrelevant premise
 * Form: Person X have property A. A is bad. Therefore, X is wrong.
@@ -156,7 +154,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Hasty Generalization
 
-<img src='/images/fallacies/hasty_generalization.png' width='50%'/>
+<img src='/images/fallacies/hasty_generalization.png'/>
 
 * Category: Insufficient premise
 * Form: A has property X. B has property X. Therefore, C, D, E have property X.
@@ -182,7 +180,7 @@ A fallacy doesn't mean that the conclusion is wrong, but only that the conclusio
 
 ## Appeal to Inappropriate Authority
 
-<img src='/images/fallacies/appeal_to_inappropriate_authority.jpeg' width='40%'/>
+<img src='/images/fallacies/appeal_to_inappropriate_authority.jpeg'/>
 
 * Category:
 * Common form: ""
