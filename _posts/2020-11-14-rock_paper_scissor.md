@@ -16,7 +16,7 @@ Rock, Paper, Scissors (RPS) is a simple classic game. How many plays (or moves) 
 
 ## Theory
 
-Let's explore this problem using both theory and simulations. First, in terms of mathematics, whatever the AI picks, we have 2 in 3 chances of either winning or losing, i.e., the game ends, and 1 in 3 chances of getting a tie. Let $$E[X]$$ be the expected number of games taken place, we have:
+Let's explore this problem using both theory and simulations. First, in terms of mathematics, we have 2 in 3 chances of either winning or losing, i.e., the game ends, and 1 in 3 chances of getting a tie. Let $$E[X]$$ be the expected number of games taken place, we have:
 
 $$E[X] = \frac{2}{3} + \frac{1}{3}(E[X] + 1)$$
 
@@ -65,7 +65,6 @@ for _ in range(1000000):
 Let's look at the distribution of the number of games!
 
 ```python
-
 def plot_hist(games: list):
     plt.hist(games, bins=range(max(games)))
     
